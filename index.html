@@ -7,8 +7,12 @@
 
 <h1>This is a heading</h1>
 <p>This is a paragraph.</p>
-<p>Line ID:<span id="id"></span id="id"></p>
+<p>Line ID:<span id="id"></span ></p>
+    <p>Line Name:<span id="name"></span ></p>
+        <p>Line picture:<span id="pictureUrl"></span ></p>
+            <p>Line statusMessage:<span id="statusMessage"></span ></p>
 
+                
 <script>
 
 $( document ).ready(function() {
@@ -29,12 +33,17 @@ function initializeLiff() {
             liff.getProfile().then(function (e) {
             
                        $( "#id" ).text(e.userId);
+                       $( "#name" ).text(e.displayName);
+                       $( "#pictureUrl" ).text(e.pictureUrl);
+                       $( "#statusMessage" ).text(e.statusMessage);
                     });
   
         })
         .catch((err) => {
            alert(err);
         });
+
+        alert(liff.isInClient());
 }
 
 </script>

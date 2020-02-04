@@ -28,7 +28,7 @@ function initializeLiff() {
         })
         .then(() => {
             // start to use LIFF's api
-            
+            alert(liff.isInClient());
 
             liff.getProfile().then(function (e) {
             
@@ -38,12 +38,14 @@ function initializeLiff() {
                        $( "#statusMessage" ).text(e.statusMessage);
                     });
   
+
+
         })
         .catch((err) => {
            alert(err);
         });
 
-        alert(liff.isInClient());
+       
 }
 
 </script>

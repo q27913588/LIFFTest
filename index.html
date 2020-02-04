@@ -12,7 +12,7 @@
 
 $( document ).ready(function() {
         console.log( "document loaded" );
-        initializeLiff("1653824166-RjlBlrDZ")
+      
         $( "id" ).text = "sss";
     });
 
@@ -23,17 +23,18 @@ function initializeLiff(myLiffId) {
         })
         .then(() => {
             // start to use LIFF's api
-          
+            initializeApp();
             alert(myLiffId);
             $( "id" ).text("asd");
-            liff.getOS()
-            liff.isLoggedIn()
+            alert(   liff.getOS());
+         
+  
         })
         .catch((err) => {
            alert(err);
         });
 }
-
+initializeLiff("1653824166-RjlBlrDZ")
 </script>
 
 </body>

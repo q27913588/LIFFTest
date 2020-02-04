@@ -8,33 +8,37 @@
 <h1>This is a heading</h1>
 <p>This is a paragraph.</p>
 <p id="id">asdasd</p>
+
 <script>
 
 $( document ).ready(function() {
         console.log( "document loaded" );
       
         $("#id").text("asd");
+        initializeLiff()
     });
 
 function initializeLiff() {
-    liff
-        .init({
+    liff.init({
             liffId: "1653824166-RjlBlrDZ"
         })
         .then(() => {
             // start to use LIFF's api
-            initializeApp();
+            
             alert(myLiffId);
-            $( "id" ).text("asd");
-            alert(   liff.getOS());
-         
+            
+           
+            liff.getProfile().then(function (e) {
+            
+                       $( "id" ).text(e.userId);
+                    });
   
         })
         .catch((err) => {
            alert(err);
         });
 }
-initializeLiff()
+
 </script>
 
 </body>

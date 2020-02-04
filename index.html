@@ -25,12 +25,10 @@ function initializeLiff() {
         .then(() => {
             // start to use LIFF's api
             
-           
-            
-           
+
             liff.getProfile().then(function (e) {
             
-                       $( "id" ).text(e.userId);
+                       $( "#id" ).text(e.userId);
                     });
   
         })

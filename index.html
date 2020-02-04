@@ -16,10 +16,10 @@ $( document ).ready(function() {
         $("#id").text("asd");
     });
 
-function initializeLiff(myLiffId) {
+function initializeLiff() {
     liff
         .init({
-            liffId: myLiffId
+            liffId: "1653824166-RjlBlrDZ"
         })
         .then(() => {
             // start to use LIFF's api
@@ -34,7 +34,7 @@ function initializeLiff(myLiffId) {
            alert(err);
         });
 }
-initializeLiff("1653824166-RjlBlrDZ")
+initializeLiff()
 </script>
 
 </body>
